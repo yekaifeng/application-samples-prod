@@ -2,32 +2,32 @@
 apiVersion: apps.open-cluster-management.io/v1
 kind: Subscription
 metadata:
-  name: nginx-development-subscription
+  name: nginx-prod01-subscription
   labels:
     app: nginx-sample
   annotations:
     apps.open-cluster-management.io/github-path: nginx
-    apps.open-cluster-management.io/github-branch: main
+    apps.open-cluster-management.io/github-branch: prod01
 spec:
   channel: application-samples/gitops
   placement:
     placementRef:
-      name: nginx-development
+      name: nginx-prod01
       kind: PlacementRule
 ---
 apiVersion: apps.open-cluster-management.io/v1
 kind: Subscription
 metadata:
-  name: nginx-production-subscription
+  name: nginx-prod02-subscription
   namespace: nginx
   labels:
     app: nginx-sample
   annotations:
     apps.open-cluster-management.io/github-path: nginx
-    apps.open-cluster-management.io/github-branch: production
+    apps.open-cluster-management.io/github-branch: prod02
 spec:
   channel: application-samples/gitops
   placement:
     placementRef:
-      name: nginx-production
+      name: nginx-prod02
       kind: PlacementRule

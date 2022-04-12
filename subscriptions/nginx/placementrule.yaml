@@ -2,7 +2,7 @@
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
-  name: nginx-development
+  name: nginx-prod01
   labels:
     app: nginx-sample
 spec:
@@ -13,13 +13,13 @@ spec:
   #- name: cluster1
   clusterSelector:
     matchLabels:
-      usage: development
+      cluster-environment: prod01
   #clusterReplicas: 1  #Apply to how many matched clusters, default is ALL
 ---
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
-  name: nginx-production
+  name: nginx-prod02
   namespace: nginx
   labels:
     app: nginx-sample
@@ -31,5 +31,5 @@ spec:
   #- name: cluster1
   clusterSelector:
     matchLabels:
-      usage: production
+      cluster-environment: prod02
   #clusterReplicas: 1  #Apply to how many matched clusters, default is ALL
