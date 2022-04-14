@@ -20,3 +20,11 @@ spec:
         ports:
         - containerPort: 8080
         imagePullPolicy: Always
+        volumeMounts:
+            - mountPath: /app/index.html
+              name: content-config
+              subPath: index.html
+      volumes:
+        - name: content-config
+          configMap:
+            name: content-config
