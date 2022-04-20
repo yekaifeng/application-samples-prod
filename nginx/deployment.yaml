@@ -14,6 +14,18 @@ spec:
       labels:
         app: nginx-sample
     spec:
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 100
+              podAffinityTerm:
+                labelSelector:
+                  matchExpressions:
+                    - key: app
+                      operator: In
+                      values:
+                        - nginx-sample
+                topologyKey: kubernetes.io/hostname
       containers:
       - name: nginx
         image: quay.io/jpacker/nginx:1.16.1
