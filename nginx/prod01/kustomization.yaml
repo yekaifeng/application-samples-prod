@@ -1,0 +1,7 @@
+resources:
+  - ../base
+configMapGenerator:
+  - name: content-config
+    behavior: replace
+    files:
+      - index.html
