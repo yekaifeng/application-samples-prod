@@ -23,7 +23,7 @@ metadata:
   labels:
     app: nginx-sample
   annotations:
-    apps.open-cluster-management.io/github-path: nginx/prod01
+    apps.open-cluster-management.io/github-path: nginx/prod02
     apps.open-cluster-management.io/github-branch: kustomize
 spec:
   channel: application-samples/gitops
