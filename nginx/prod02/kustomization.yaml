@@ -3,6 +3,5 @@ resources:
 namePrefix: prod02-
 configMapGenerator:
   - name: content-config
-    behavior: replace
     files:
       - index.html
