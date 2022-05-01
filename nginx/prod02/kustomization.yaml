@@ -1,5 +1,6 @@
 resources:
   - ../base
+namePrefix: prod02-
 configMapGenerator:
   - name: content-config
     behavior: replace
