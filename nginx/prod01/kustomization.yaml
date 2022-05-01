@@ -6,4 +6,4 @@ configMapGenerator:
       - index.html
   - name: env-config
     literals:
-      - TZ=Asia/Beijing
+      - TZ=Asia/Macau
