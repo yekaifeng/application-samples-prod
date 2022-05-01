@@ -32,6 +32,12 @@ spec:
         ports:
         - containerPort: 8080
         imagePullPolicy: Always
+        env:
+          - name: TZ
+            valueFrom:
+              configMapKeyRef:
+                name: env-config
+                key: TZ
         volumeMounts:
             - mountPath: /app/index.html
               name: content-config

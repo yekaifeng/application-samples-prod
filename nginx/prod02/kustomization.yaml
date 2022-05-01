@@ -1,7 +1,9 @@
 resources:
   - ../base
-namePrefix: prod02-
 configMapGenerator:
   - name: content-config
     files:
       - index.html
+  - name: env-config
+    literals:
+      - TZ = Asia/Shanghai
