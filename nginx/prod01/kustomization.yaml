@@ -10,3 +10,6 @@ configMapGenerator:
   - name: env-config
     literals:
       - TZ=Asia/Macau
+replicas:
+  - name: nginx-sample
+    count: 2
