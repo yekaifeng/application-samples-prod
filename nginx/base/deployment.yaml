@@ -28,7 +28,7 @@ spec:
                 topologyKey: kubernetes.io/hostname
       containers:
       - name: nginx
-        image: quay.io/jpacker/nginx:1.16.1
+        image: quay.io/kye/nginx:1.16.1
         ports:
         - containerPort: 8080
         imagePullPolicy: Always
