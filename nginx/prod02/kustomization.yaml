@@ -2,7 +2,7 @@ resources:
   - ../base
 images:
   - name: quay.io/kye/nginx
-    newTag: 1.16.2
+    newTag: 1.16.3
 configMapGenerator:
   - name: content-config
     files:
