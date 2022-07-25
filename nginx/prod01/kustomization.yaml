@@ -9,7 +9,7 @@ configMapGenerator:
       - index.html
   - name: env-config
     literals:
-      - TZ=Asia/Macau
+      - TZ=Asia/Shanghai
 replicas:
   - name: nginx-sample
     count: 2
